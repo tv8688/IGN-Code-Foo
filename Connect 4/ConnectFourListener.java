@@ -25,7 +25,7 @@ public class ConnectFourListener implements MouseListener {
 				int min_col=-1;
 				for(int i=0;i<7;i++){
 					if(game.possible_drop(i)){
-						int result=-1*game.minimax(i, 3);
+						int result=-1*game.minimax(i, 5);
 						if(min_value>=result){
 							min_value=result;
 							min_col=i;

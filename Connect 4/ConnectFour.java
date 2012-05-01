@@ -197,6 +197,10 @@ public class ConnectFour implements Cloneable{
 		for (int i=0;i<7;i++){
 			if(this_move.possible_drop(i)){
 				int result=-1*this_move.minimax(i,depth-1);
+				if(result==-1*Integer.MAX_VALUE){
+					value=result;
+					break;
+				}
 				if(value>result)value=result;
 			}
 		}
