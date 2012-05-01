@@ -57,11 +57,11 @@ public class ConnectFourGUI {
 	public void set(int column, int row) {
 		// slots[column][row].setText("*" + currentPlayer + "*");
 		if (currentPlayer == 1) {
-			slots[column][row].setIcon(new ImageIcon("redcircle.png"));
+			slots[column][row].setIcon(new ImageIcon(getClass().getResource("redcircle.png")));
 			status.setText("Bot's turn");
 		}
 		else {
-			slots[column][row].setIcon(new ImageIcon("yellowcircle.png"));
+			slots[column][row].setIcon(new ImageIcon(getClass().getResource("yellowcircle.png")));
 			status.setText("Player's turn.");
 		}
 		currentPlayer = (currentPlayer%2)+1;
